@@ -1,0 +1,2 @@
+%{"detergent": {:git, "git://github.com/devinus/detergent.git", "9e3ea8616192073823ffe9e061424dacaf78d0ed", []},
+  "erlsom": {:git, "git://github.com/willemdj/erlsom.git", "5dba7819ef99ba84eeb43c946dbe7f16792e6086", []}}
