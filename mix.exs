@@ -12,7 +12,8 @@ defmodule Detergentex.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :inets, :ssl],
+      mod: {Detergentex, []}]
   end
 
   # Dependencies can be Hex packages:
