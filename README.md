@@ -4,9 +4,11 @@ Detergentex
 An Elixir client for SOAP Services using the erlang detergent library.
 
 ## Usage
-1) Add detergentex to your deps:
+1) Add detergentex and its erlang dependencies to your deps:
 
 ```elixir
+{:detergent, github: "devinus/detergent" },
+{:erlsom, github: "willemdj/erlsom"},
 {:detergentex, "0.0.1"}
 ```
 
