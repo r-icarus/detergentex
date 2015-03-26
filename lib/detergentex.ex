@@ -11,6 +11,6 @@ defmodule Detergentex do
   end
 
   def call(wsdl_url, method, params) do
-    Detergentex.Client.call_service(wsdl_url, method, params)    
+    Detergentex.Client.call_service(wsdl_url, method, params)
   end
 end
