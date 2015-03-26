@@ -5,7 +5,15 @@ defmodule Detergentex.Mixfile do
     [app: :detergentex,
      version: "0.0.1",
      elixir: "~> 1.0",
-     deps: deps]
+     deps: deps,
+     package: [
+      contributors: ["Ricardo Echavarria"],
+      licenses: ["MIT"],
+      links: %{github: "https://github.com/r-icarus/detergentex"}
+     ],
+     description: """
+     Elixir binding to Detergent erlang library used to call WSDL/SOAP Services
+     """]
   end
 
   # Configuration for the OTP application
