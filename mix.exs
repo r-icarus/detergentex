@@ -3,11 +3,11 @@ defmodule Detergentex.Mixfile do
 
   def project do
     [app: :detergentex,
-     version: "0.0.1",
+     version: "0.0.2",
      elixir: "~> 1.0",
      deps: deps,
      package: [
-      contributors: ["Ricardo Echavarria"],
+      contributors: ["Ricardo Echavarria", "Jonas Trevisan"],
       licenses: ["MIT"],
       links: %{github: "https://github.com/r-icarus/detergentex"}
      ],
