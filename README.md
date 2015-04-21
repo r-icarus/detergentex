@@ -23,7 +23,18 @@ An Elixir client for SOAP Services using the erlang detergent library.
 3) Call web services using `Detergentex.call(wsdl, method, parameters)`:
 
 ```elixir
-Detergentex.call("http://www.webservicex.net/convertVolume.asmx?WSDL","ChangeVolumeUnit", ["100","dry","centiliter"])
+wsdl_url = "http://www.webservicex.net/convertVolume.asmx?WSDL"
+action = "ChangeVolumeUnit"
+parameters = ["100","dry","centiliter"]
+
+Detergentex.call(wsdl_url, action, parameters)
+
+# Cache the wsdl to do recurrent calls quickly
+wsdl = Detergentex.init_model(wsdl_url)
+
+Detergentex.call(wsdl, action, parameters)
+Detergentex.call(wsdl, action, parameters)
+Detergentex.call(wsdl, action, parameters)
 ```
 
 ## License
