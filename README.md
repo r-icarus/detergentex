@@ -30,7 +30,6 @@ parameters = ["100","dry","centiliter"]
 Detergentex.call(wsdl_url, action, parameters)
 
 # Cache the wsdl to do recurrent calls quickly
-
 wsdl = Detergentex.init_model(wsdl_url)
 
 Detergentex.call(wsdl, action, parameters)
