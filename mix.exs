@@ -3,7 +3,7 @@ defmodule Detergentex.Mixfile do
 
   def project do
     [app: :detergentex,
-     version: "0.0.2",
+     version: "0.0.3",
      elixir: "~> 1.0",
      deps: deps,
      package: [
@@ -35,7 +35,7 @@ defmodule Detergentex.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      {:detergent, github: "devinus/detergent" },
+      {:detergent, "~> 0.3.0" },
       {:erlsom, github: "willemdj/erlsom"}
     ]
   end
