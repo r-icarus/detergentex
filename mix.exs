@@ -3,7 +3,7 @@ defmodule Detergentex.Mixfile do
 
   def project do
     [app: :detergentex,
-     version: "0.0.3",
+     version: "0.0.4",
      elixir: "~> 1.0",
      deps: deps,
      package: [
@@ -12,7 +12,7 @@ defmodule Detergentex.Mixfile do
       links: %{github: "https://github.com/r-icarus/detergentex"}
      ],
      description: """
-     Elixir binding to Detergent erlang library used to call WSDL/SOAP Services
+     Elixir binding to Detergent erlang library used to call WSDL SOAP Services
      """]
   end
 
