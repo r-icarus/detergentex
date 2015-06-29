@@ -8,7 +8,7 @@ An Elixir client for SOAP Services using the erlang detergent library.
 
 ```elixir
 {:erlsom, github: "willemdj/erlsom"},
-{:detergentex, "0.0.3"}
+{:detergentex, "0.0.4"}
 ```
 
 2) Add `:detergentex` to the list of application dependencies in your `mix.exs`.
