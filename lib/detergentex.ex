@@ -21,4 +21,8 @@ defmodule Detergentex do
   def is_wsdl(wsdl) do
     Detergentex.Client.is_wsdl(wsdl)
   end
+
+  def wsdl_operations(wsdl) do
+    Detergentex.Client.wsdl_operations(wsdl)
+  end
 end
