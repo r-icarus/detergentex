@@ -19,4 +19,6 @@ defmodule Detergentex.Client do
   end
 
   def is_wsdl(wsdl), do: :detergent.is_wsdl(wsdl)
+
+  def wsdl_operations(wsdl), do: :detergent.wsdl_operations(wsdl)
 end

@@ -18,4 +18,13 @@ defmodule DetergentexTest do
     {:ok, _, response} = Detergentex.call(wsdl, @action, @parameters)
     assert Enum.count(response) == 1
   end
+
+  test "should be able to get the list of wsdl operations from the service" do
+    wsdl = Detergentex.init_model(@wsdl_url)
+    ops_list = [ head | _ ] = Detergentex.wsdl_operations(wsdl)
+
+    assert Enum.count(ops_list) > 0
+    assert (head |> Tuple.to_list |> Enum.count) == 7
+    assert elem(head, 0) == :operation
+  end
 end
