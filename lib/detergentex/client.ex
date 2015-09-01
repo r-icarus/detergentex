@@ -10,8 +10,9 @@ defmodule Detergentex.Client do
     if not is_wsdl(wsdl) do
       wsdl = to_char_list wsdl
     end
-    detergent_params = Enum.map(params, fn(elem) -> to_char_list(elem) end)
-    :detergent.call(wsdl, to_char_list(method), detergent_params)
+    method_to_call = to_char_list(method)
+    detergent_params = convert_to_detergent_params(params)
+    :detergent.call(wsdl, method_to_call, detergent_params)
   end
 
   def init_model(wsdl_url, prefix \\ 'p') do
@@ -21,4 +22,17 @@ defmodule Detergentex.Client do
   def is_wsdl(wsdl), do: :detergent.is_wsdl(wsdl)
 
   def wsdl_operations(wsdl), do: :detergent.wsdl_operations(wsdl)
+
+  def convert_to_detergent_params(params) do
+    Enum.map(params, fn(elem) ->
+        case elem do
+          elem when is_list(elem) ->
+            convert_to_detergent_params(elem)
+          elem when is_binary(elem) ->
+            to_char_list(elem)
+          _ ->
+            elem
+        end
+    end)
+  end
 end

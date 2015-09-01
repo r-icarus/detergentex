@@ -3,7 +3,7 @@ defmodule Detergentex.Mixfile do
 
   def project do
     [app: :detergentex,
-     version: "0.0.5",
+     version: "0.0.6",
      elixir: "~> 1.0",
      deps: deps,
      package: [

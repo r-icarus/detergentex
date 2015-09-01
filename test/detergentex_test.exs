@@ -10,9 +10,15 @@ defmodule DetergentexTest do
     assert Enum.count(response) == 1
   end
 
+  test "should process lists with nested lists" do
+    params = [ "name", "Fulano", "skills" , ["jumping", 20, "running", 90]]
+    result = [ 'name', 'Fulano', 'skills' , ['jumping', 20, 'running', 90]]
+    assert result == Detergentex.Client.convert_to_detergent_params(params)
+  end
+
   test "should create a wsdl model and accept it to do calls" do
     wsdl = Detergentex.init_model @wsdl_url
-    
+
     assert Detergentex.is_wsdl wsdl
 
     {:ok, _, response} = Detergentex.call(wsdl, @action, @parameters)
