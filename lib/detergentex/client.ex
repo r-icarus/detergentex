@@ -28,6 +28,11 @@ defmodule Detergentex.Client do
         case elem do
           elem when is_list(elem) ->
             convert_to_detergent_params(elem)
+          elem when is_tuple(elem) ->
+            elem
+              |> Tuple.to_list
+              |> convert_to_detergent_params
+              |> List.to_tuple
           elem when is_binary(elem) ->
             to_char_list(elem)
           _ ->
