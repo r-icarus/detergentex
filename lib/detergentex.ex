@@ -10,8 +10,8 @@ defmodule Detergentex do
       Supervisor.start_link(children, opts)
   end
 
-  def call(wsdl, method, params) do
-    Detergentex.Client.call_service(wsdl, method, params)
+  def call(wsdl, method, params, options \\ []) do
+    Detergentex.Client.call_service(wsdl, method, params, options)
   end
 
   def init_model(wsdl_url, prefix \\ 'p') do
