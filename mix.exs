@@ -5,7 +5,7 @@ defmodule Detergentex.Mixfile do
     [app: :detergentex,
      version: "0.0.7",
      elixir: "~> 1.0",
-     deps: deps,
+     deps: deps(),
      package: [
       contributors: ["Ricardo Echavarria", "Jonas Trevisan", "David Escobar"],
       licenses: ["MIT"],
